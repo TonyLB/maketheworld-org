@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom'
 
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
 import AppBar from '@material-ui/core/AppBar'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import './index.css'
 import Home from './Home'
+import Features from './Features'
 import About from './About'
 import News from './News'
 import Contact from './Contact'
 import * as serviceWorker from './serviceWorker'
 
 const TabPanel = (props) => {
+    const classes = useStyles()
     const { children, value, index, ...other } = props;
 
     return (
@@ -26,7 +27,11 @@ const TabPanel = (props) => {
             {...other}
         >
             {value === index && (
-                <React.Fragment>{children}</React.Fragment>
+                <div className={classes.tabContent}>
+                    <div>
+                        {children}
+                    </div>
+                </div>
             )}
         </div>
     )
@@ -42,9 +47,32 @@ const a11yProps = (index) => {
 const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: theme.palette.background.paper,
-      maxWidth: "1000",
-      margin: "auto"
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "top",
+      paddingTop: 40
     },
+    tabs: {
+        borderRight: `1px solid ${theme.palette.divider}`,
+        flexShrink: 0
+    },
+    tabPanel: {
+        maxWidth: "1200",
+        width: "100%",
+        padding: 20
+    },
+    tabContent: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%"
+    },
+    appBar: {
+        height: 40,
+        alignItems: "center",
+        paddingLeft: "200px"
+    }
   }));
   
 const MTWTabs = () => {
@@ -57,37 +85,42 @@ const MTWTabs = () => {
     }
     
     return (
-        <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+        <React.Fragment>
+            <AppBar className={classes.appBar}><Typography variant="h4">Make The World</Typography></AppBar>
             <div className={classes.root}>
-                <AppBar position="static" color="default" style={{ width: "100%" }}>
-                    <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        centered
-                        aria-label="full width tabs example"
-                    >
-                        <Tab label="Home" {...a11yProps(0)} />
-                        <Tab label="About" {...a11yProps(1)} />
-                        <Tab label="News" {...a11yProps(2)} />
-                        <Tab label="Contact" {...a11yProps(3)} />
-                    </Tabs>
-                </AppBar>
-                <TabPanel value={value} index={0} dir={theme.direction}>
+                <Tabs
+                    orientation="vertical"
+                    variant="scrollable"
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    aria-label="navigation tabs"
+                    className={classes.tabs}
+                >
+                    <Tab label="Home" {...a11yProps(0)} />
+                    <Tab label="Features" {...a11yProps(1)} />
+                    <Tab label="About Us" {...a11yProps(2)} />
+                    <Tab label="News" {...a11yProps(3)} />
+                    <Tab label="Contact" {...a11yProps(4)} />
+                </Tabs>
+                <TabPanel className={classes.tabPanel} value={value} index={0} dir={theme.direction}>
                     <Home />
                 </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
+                <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
+                    <Features />
+                </TabPanel>
+                <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
                     <About />
                 </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
+                <TabPanel className={classes.tabPanel} value={value} index={3} dir={theme.direction}>
                     <News />
                 </TabPanel>
-                <TabPanel value={value} index={3} dir={theme.direction}>
+                <TabPanel className={classes.tabPanel} value={value} index={4} dir={theme.direction}>
                     <Contact />
                 </TabPanel>
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 

@@ -1,23 +1,79 @@
-import React from 'react';
+import React from 'react'
 
-const News = () => {
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import CardHeader from '@material-ui/core/CardHeader'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(() => ({
+    card: {
+        border: '2px solid',
+        borderColor: '#E7EDF3',
+        borderRadius: 16,
+        margin: "10px",
+        height: "100%"
+    },
+    paper: {
+    }
+}))
+
+function News() {
+    const classes = useStyles()
     return (
-        <div className="News">
-            <header className="News-header">
-                V 1.0 - June 1 Release
-                <br />
-                In late February, William introduced Tony and Meg with the idea of making a MUSH for the duration of the pandemic. A few playtests later, here we are: our first release.
-                <br />
-                Make The World immediately grew beyond making one game-world. After all, why make one game world when you can build tools to make it easy for anyone to build a game world?
-                <br />
-                On the tech front: We're using AWS and React, with Cloudfront and lambda. The code is open source, and available in the AWS marketthing.
-                <br />
-                Gaming: Meg's a badass game designer, with such games as Apocalypse World and Psy Run to her name.
-                <br />
-                Procedures: This has been an Agile development from the start, focusing on small increments. There WILL be additional updates, and we hope they are awesome.
-            </header>
+        <div style={{ maxWidth: "1200px" }}>
+            <Grid container>
+                <Grid item xs={6} spacing={4}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader title="Late February, 2020..." />
+                            <CardContent>
+                                Over on the Apocalypse World Discord server, Meg said she wished there was an Apocalypse World: Burned Over MUSH for the duration
+                                of the pandemic. William said something like that was actually feasible and looped Tony into the project, who had the tech skill
+                                to make it happen.
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader title="Late April..." />
+                            <CardContent>
+                                We held our first open alpha-test with a few dozen people.  They rattled around the Apocalypse World, created new rooms and neighborhoods
+                                to suit their fancy, and told stories with each other.  Space Station Zero emerged from some collaborative creation during that session,
+                                and grew from there.
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader title="Mid-June" />
+                            <CardContent>
+                                We released version 1.0 (the <em>minimum viable product</em>) to the public.  It supports rooms, neighborhoods, maps, navigation, chat,
+                                direct messaging, permissions, etc.  V1.0 is a bit threadbare, but that's the nature of getting things in front of people as soon as
+                                you can!
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader title="The Future..." />
+                            <CardContent>
+                                Development doesn't stop at the minimum-viable-product!  We've got big plans for objects, asynchronous messages, game-state that will
+                                allow for automated puzzles and processes, and much, much more!
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+            </Grid>
         </div>
-    );
+    )
 }
 
 export default News
