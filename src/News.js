@@ -16,6 +16,7 @@ const useStyles = makeStyles(() => ({
         height: "100%"
     },
     paper: {
+        height: "100%"
     }
 }))
 
@@ -23,27 +24,14 @@ function News() {
     const classes = useStyles()
     return (
         <div style={{ maxWidth: "1200px" }}>
-            <Grid container>
-                <Grid item xs={6} spacing={4}>
+            <Grid container spacing={2}>
+            <Grid item xs={6}>
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
-                            <CardHeader title="Late February, 2020..." />
+                            <CardHeader title="The Future..." />
                             <CardContent>
-                                Over on the Apocalypse World Discord server, Meg said she wished there was an Apocalypse World: Burned Over MUSH for the duration
-                                of the pandemic. William said something like that was actually feasible and looped Tony into the project, who had the tech skill
-                                to make it happen.
-                            </CardContent>
-                        </Card>
-                    </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                    <Paper elevation={0} className={classes.paper}>
-                        <Card className={classes.card}>
-                            <CardHeader title="Late April..." />
-                            <CardContent>
-                                We held our first open alpha-test with a few dozen people.  They rattled around the Apocalypse World, created new rooms and neighborhoods
-                                to suit their fancy, and told stories with each other.  Space Station Zero emerged from some collaborative creation during that session,
-                                and grew from there.
+                                Development doesn't stop at the minimum-viable-product!  We've got big plans for objects, asynchronous messages, game-state that will
+                                allow for automated puzzles and processes, and much, much more!
                             </CardContent>
                         </Card>
                     </Paper>
@@ -63,10 +51,23 @@ function News() {
                 <Grid item xs={6}>
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
-                            <CardHeader title="The Future..." />
+                            <CardHeader title="Late April..." />
                             <CardContent>
-                                Development doesn't stop at the minimum-viable-product!  We've got big plans for objects, asynchronous messages, game-state that will
-                                allow for automated puzzles and processes, and much, much more!
+                                We held our first open alpha-test with a few dozen people.  They rattled around the Apocalypse World, created new rooms and neighborhoods
+                                to suit their fancy, and told stories with each other.  Space Station Zero emerged from some collaborative creation during that session,
+                                and grew from there.
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6} spacing={4}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader title="Late February, 2020..." />
+                            <CardContent>
+                                Over on the Apocalypse World Discord server, Meg said she wished there was an Apocalypse World: Burned Over MUSH for the duration
+                                of the pandemic. William said something like that was actually feasible and looped Tony into the project, who had the tech skill
+                                to make it happen.
                             </CardContent>
                         </Card>
                     </Paper>

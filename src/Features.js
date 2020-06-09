@@ -3,6 +3,7 @@ import React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardHeader from '@material-ui/core/CardHeader'
+import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -13,6 +14,13 @@ const useStyles = makeStyles(() => ({
         borderRadius: 16,
         margin: "10px",
         height: "100%"
+    },
+    media: {
+        height: "100px"
+    },
+    header: {
+        color: "#FFFFFF",
+        textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
     }
 }))
 
@@ -32,7 +40,13 @@ function Features() {
                     <Grid container spacing={4}>
                         <Grid item xs={12}>
                             <Card className={classes.card}>
-                                <CardHeader title="Web-Native" />
+                                <CardMedia
+                                    className={classes.media}
+                                    image="/images/Spiderweb.jpg"
+                                    title="Web"
+                                >
+                                    <CardHeader className={classes.header} title="Web-Native" />
+                                </CardMedia>
                                 <CardContent>
                                     The game lives (as far as you're concerned) in your web-browser.  That's where you make an imaginary world, and tell stories with the friends
                                     you will make in it.  Having the power of a web-browser to draw on means that we can present a richer experience than previous such games.
@@ -43,7 +57,13 @@ function Features() {
                         </Grid>
                         <Grid item xs={12}>
                             <Card className={classes.card}>
-                                <CardHeader title="Grassroots-Focussed" />
+                            <CardMedia
+                                className={classes.media}
+                                image="/images/Grass.jpg"
+                                title="Web"
+                            >
+                                <CardHeader className={classes.header} title="Grassroots-Focussed" />
+                            </CardMedia>
                                 <CardContent>
                                     Make The World is built from the foundations to support turning <em>players</em> into <em>collaborators</em>.  It makes it simple for players to
                                     create private rooms, neighborhoods, and worlds of their own, from the moment they log on ... while keeping these creations seamlessly hidden
@@ -57,7 +77,13 @@ function Features() {
                 </Grid>
                 <Grid item xs={6}>
                     <Card className={classes.card}>
-                        <CardHeader title="Cloud-Powered" />
+                        <CardMedia
+                            className={classes.media}
+                            image="/images/Cloud.jpg"
+                            title="Web"
+                        >
+                            <CardHeader className={classes.header} title="Cloud-Powered" />
+                        </CardMedia>
                         <CardContent>
                             A Make The World instance lives in the Amazon Web Services (AWS) cloud, as a constellation of storage resources and serverless compute calls.  That
                             means three things on a practical level:
