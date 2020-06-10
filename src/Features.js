@@ -85,8 +85,8 @@ function Features() {
                             <CardHeader className={classes.header} title="Cloud-Powered" />
                         </CardMedia>
                         <CardContent>
-                            A Make The World instance lives in the Amazon Web Services (AWS) cloud, as a constellation of storage resources and serverless compute calls.  That
-                            means three things on a practical level:
+                            The power behind a Make The World instance lives in the Amazon Web Services (AWS) cloud, as a constellation of storage resources and serverless compute
+                            calls.  That means three things on a practical level:
                             <ul>
                                 <li>
                                     First, the computing power available to the game scales to what it needs, smoothly, without any wasted expenses or capacity ceiling.
