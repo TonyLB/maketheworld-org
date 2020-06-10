@@ -70,8 +70,8 @@ function About() {
                                 className={classes.header}
                                 title="William Nichols"
                                 titleTypographyProps={{ variant: "h5" }}
-                                avatar={<Avatar alt="William" src="/images/William.jpg" style={{ width: "60px", height: "60px", border: "2px solid #1369e1" }} />}
-                                style={{ backgroundColor: "#93bffc" }}
+                                avatar={<Avatar alt="William" src="/images/William.jpg" style={{ width: "60px", height: "60px", border: "2px solid #20c234" }} />}
+                                style={{ backgroundColor: "#93e89e" }}
                             />
                             <CardContent>
                                 William verbs games, and manages software projects professionally. He's been building communities of gamers for years, and knows he
