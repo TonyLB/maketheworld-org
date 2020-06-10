@@ -379,7 +379,7 @@ function Tour() {
                                 <p>
                                 But there <strong>are</strong> scarce resources in a social game:  Player attention, and player security.  Players don't want to be flooded
                                 with a million possible links (making it impossible to find the ones they actually might be interested in), and in the same
-                                way nobody wants to see "Hate Crime World" just because some edgy teenager felt like shoving it in front of your face.
+                                way nobody wants to see "Hate Crime World" just because some edgelord felt like shoving it in front of your face.
                                 </p>
                                 <p>
                                 That's why neighborhoods start out as private and dead-end:  You can create anything you want, but it is created in a space
