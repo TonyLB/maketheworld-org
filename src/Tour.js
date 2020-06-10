@@ -19,6 +19,9 @@ const useStyles = makeStyles(() => ({
         height: "100%"
     },
     header: {
+    },
+    image: {
+        maxWidth: "100%"
     }
 }))
 
@@ -59,7 +62,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour1" src="/images/Tour/Tour1.png" />
+                                <img className={classes.image} alt="Tour1" src="/images/Tour/Tour1.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -79,7 +82,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour2" src="/images/Tour/Tour2.png" />
+                                <img className={classes.image} alt="Tour2" src="/images/Tour/Tour2.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -116,7 +119,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour3" src="/images/Tour/Tour3.png" />
+                                <img className={classes.image} alt="Tour3" src="/images/Tour/Tour3.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -137,7 +140,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour4" src="/images/Tour/Tour4.png" />
+                                <img className={classes.image} alt="Tour4" src="/images/Tour/Tour4.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -157,7 +160,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour5" src="/images/Tour/Tour5.png" />
+                                <img className={classes.image} alt="Tour5" src="/images/Tour/Tour5.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -166,7 +169,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour6" src="/images/Tour/Tour6.png" />
+                                <img className={classes.image} alt="Tour6" src="/images/Tour/Tour6.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -215,7 +218,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour7" src="/images/Tour/Tour7.png" />
+                                <img className={classes.image} alt="Tour7" src="/images/Tour/Tour7.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -235,7 +238,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour8" src="/images/Tour/Tour8.png" />
+                                <img className={classes.image} alt="Tour8" src="/images/Tour/Tour8.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -266,7 +269,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour9" src="/images/Tour/Tour9.png" />
+                                <img className={classes.image} alt="Tour9" src="/images/Tour/Tour9.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -306,7 +309,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img alt="Tour10" src="/images/Tour/Tour10.png" />
+                                <img className={classes.image} alt="Tour10" src="/images/Tour/Tour10.png" />
                             </CardContent>
                         </Card>
                     </Paper>
