@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import './index.css'
 import Home from './Home'
+import Tour from './Tour'
 import Features from './Features'
 import About from './About'
 import News from './News'
@@ -99,24 +100,28 @@ const MTWTabs = () => {
                     className={classes.tabs}
                 >
                     <Tab label="Home" {...a11yProps(0)} />
-                    <Tab label="Features" {...a11yProps(1)} />
-                    <Tab label="About Us" {...a11yProps(2)} />
-                    <Tab label="News" {...a11yProps(3)} />
-                    <Tab label="Contact" {...a11yProps(4)} />
+                    <Tab label="Tour" {...a11yProps(1)} />
+                    <Tab label="Features" {...a11yProps(2)} />
+                    <Tab label="About Us" {...a11yProps(3)} />
+                    <Tab label="News" {...a11yProps(4)} />
+                    <Tab label="Contact" {...a11yProps(5)} />
                 </Tabs>
                 <TabPanel className={classes.tabPanel} value={value} index={0} dir={theme.direction}>
                     <Home />
                 </TabPanel>
                 <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
-                    <Features />
+                    <Tour />
                 </TabPanel>
                 <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
-                    <About />
+                    <Features />
                 </TabPanel>
                 <TabPanel className={classes.tabPanel} value={value} index={3} dir={theme.direction}>
-                    <News />
+                    <About />
                 </TabPanel>
                 <TabPanel className={classes.tabPanel} value={value} index={4} dir={theme.direction}>
+                    <News />
+                </TabPanel>
+                <TabPanel className={classes.tabPanel} value={value} index={5} dir={theme.direction}>
                     <Contact />
                 </TabPanel>
             </div>
