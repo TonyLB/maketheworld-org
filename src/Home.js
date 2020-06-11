@@ -8,13 +8,34 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     card: {
         border: '2px solid',
         borderColor: '#E7EDF3',
         borderRadius: 16,
         margin: "10px",
         height: "100%"
+    },
+    hoverCard: {
+        border: '2px solid',
+        borderColor: '#E7EDF3',
+        borderRadius: 16,
+        margin: "10px",
+        height: "100%",
+        backgroundColor: "#FFFFFF",
+        cursor: "pointer",
+        textDecoration: "none",
+        "&:hover": {
+            backgroundColor: "#DDDDFF"
+        },
+        "&:active": {
+            backgroundColor: "#FFFFFF"
+        },
+        transition: theme.transitions.create(['backgroundColor'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+
     },
     media: {
         height: "100px"
@@ -46,31 +67,35 @@ function Home() {
                     <Card className={classes.card}>
                         <CardMedia
                             className={classes.media}
-                            image="/images/Map.png"
-                            title="Map"
-                        >
-                            <CardHeader className={classes.header} title="Create a World" />
-                        </CardMedia>
-                        <CardContent>
-                            You can create an instance of MTW to make an explorable digital space with places and pathways that work with your particular game.
-                            Design your own rooms, share them with your friends, use them for ongoing freeform play or to closely map a space to support your GMd game.
-                            Use MTW to provide a more concrete sense of space for gaming over other tech like Discord or Zoom or Hangouts.
-                        </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={6}>
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.media}
                             image="/images/Mural.jpg"
                             title="Mural"
                         >
                             <CardHeader className={classes.header} title="Join and Play" />
                         </CardMedia>
                         <CardContent>
-                            Or join one of the worlds that have been created by other people.  When you join a pre-existing game, there will be a foundation
+                            Join one of the worlds that have been created by other people.  When you join a pre-existing game, there will be a foundation
                             setting to inspire you, and other players with their own stories and relationships already in play.  You can dive right in with
                             a new character, telling your own stories and creating your own spaces within a world imagined by everyone.
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={6}>
+                    <Card
+                        className={classes.hoverCard}
+                        onClick={() => { window.open("https://github.com/TonyLB/maketheworld", "_blank") }}
+                    >
+                        <CardMedia
+                            className={classes.media}
+                            image="/images/Map.png"
+                            title="Map"
+                        >
+                            <CardHeader className={classes.header} title="Create a World" />
+                        </CardMedia>
+                        <CardContent>
+                            Or create an instance of MTW to make your own explorable digital space with places and pathways that work with your particular game.
+                            Design rooms, share them with your friends, use them for ongoing freeform play or to closely map a space to support your GMd game.
+                            Use MTW to provide a more concrete sense of space for gaming over other tech like Discord or Zoom or Hangouts, or to start a
+                            freeform community.
                         </CardContent>
                     </Card>
                 </Grid>

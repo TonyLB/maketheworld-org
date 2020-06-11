@@ -178,11 +178,11 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                            When you connect to your character you should a screen similar to the one above.  At the top of the screen is a description
+                            When you connect to your character you should see a screen similar to the one above.  At the top of the screen is a description
                             of your current room, and since the most recent event in your timeline is that you arrived in that room there is <em>also</em> a
-                            description of the room in your timelines of messages (though that bottom one may scroll away as things happen).  Worth noting
-                            in the description of the room is that it has other rooms you can go to (by walking, taking the bus, etc.)  In the image at
-                            right, there are four places you can go (Deep Space, Drowned City, Bottomless Vaults, and The Rubbles).
+                            description of the room in your timeline of messages (though that bottom one may scroll away as things happen).  Worth noting
+                            in the description of the room is that it has other rooms you can go to (by walking, taking the bus, etc.)  In the image above,
+                            there are four places you can go (Deep Space, Drowned City, Bottomless Vaults, and The Rubbles).
                             <br />
                             You can move your character in one of several ways:
                             <ul>
@@ -204,12 +204,15 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <p>
                                 There is more to do than just explore, though.  You may have happened upon some other people in your travels ... important
                                 to know how to talk to them!  That's most of what you'll be doing in the game, after all, getting together with other players
                                 and having your characters create scenes and stories together.
-
+                                </p>
+                                <p>
                                 To get a handle on those options, start by typing <em>help</em>, or clicking the question-mark button at upper right, to
                                 raise the help dialog (at right).
+                                </p>
                             </CardContent>
                         </Card>
                     </Paper>
@@ -300,7 +303,7 @@ function Tour() {
                                 Suppose you've played with people, you have a sense what sort of stories you want to tell, but there isn't a good place to
                                 tell them yet.  That sounds like you should be looking at the upper left, where a little menu-hamburger will give you access
                                 to the tools to change the <em>world</em> (as opposed to changing your characters).  There are options to edit places, and
-                                to edit maps ... maps are just a way of depicting places, so you would start by creating a new place.
+                                to edit maps ... maps are just a way of visually depicting how places relate, so you would start by creating a new place.
                             </CardContent>
                         </Card>
                     </Paper>
@@ -318,14 +321,17 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <p>
                                 Places in MTW are organized into Neighborhoods and Rooms.  A room is simply "a place characters can come together to have
                                 a scene".  If you've explored, you've been moving from room to room.  Neighborhoods are a bit more abstract:  They collect
                                 a bunch of rooms and say, for instance, "All these little stalls and back alleys are part of <em>The Low Market</em>."
-
+                                </p>
+                                <p>
                                 Neighborhoods are also where permissions are managed in the game.  You likely don't have permissions on any neighborhood to
                                 create a new <em>room</em> ... but you have permissions everywhere to create a new <em>neighborhood</em>.  So pick a place
                                 that suits your fancy, find its neighborhood in the World dialog, and click the button for "Add Neighborhood".  You'll
                                 create a smaller neighborhood inside of the larger one.
+                                </p>
                             </CardContent>
                         </Card>
                     </Paper>
@@ -342,14 +348,17 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <p>
                                 There are lots of fiddly little bits to a Neighborhood, but the main two to focus on immediately are <em>Visibility</em>&nbsp;
                                 and <em>Topology</em>.  Visibility is just what it sounds like:  Can other people see the Neighborhood?  And Topology is
                                 about how the Neighborhood can connect to other places.  Dead-End topology means you have one way in, one way out, no
                                 more.  Connected is just that ... connect where you like.
-
+                                </p>
+                                <p>
                                 As a starting player, you can create any neighborhoods you want.  Inside your own neighborhoods you can make more
-                                neighborhoods and rooms in any arrangement, but a neighborhood you create in somebody else's space must be both <em>Private</em>
+                                neighborhoods and rooms in any arrangement, but a neighborhood you create in somebody else's space must be both <em>Private</em>&nbsp;
                                 and <em>Dead-End</em>.
+                                </p>
                             </CardContent>
                         </Card>
                     </Paper>
@@ -391,10 +400,10 @@ function Tour() {
                                 than logging off would be.  You leave play with everyone else, and a while later you come back at the same place.
                                 </p>
                                 <p>
-                                But in terms of what it allows you to <em>create</em>, of course, it's a world of difference.  Literally.  You can create
-                                whole imaginary worlds with the access every first-time player is given.  And if you convince someone who edits a
-                                public neighborhood, you can hang that neighborhood off of theirs, and they'll turn it public for you.  Then all and sundry
-                                can come in and explore the world that you made.
+                                But in terms of what it allows you to <em>create</em>, of course, it's a world of difference.  Literally.  You can privately create
+                                entire imaginary worlds with the access every first-time player is given.  And if someone who edits a public neighborhood
+                                feels that they'd like to give your ideas a place, you can hang that neighborhood off of theirs, and they'll turn it public for
+                                you.  Then all and sundry can come in and explore the world that you made.
                                 </p>
                                 <p>
                                 And then, if history is any guide, they'll start coming to <em>you</em>, asking if you're willing to make public the new
