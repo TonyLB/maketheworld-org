@@ -80,6 +80,31 @@ function About() {
                         </Card>
                     </Paper>
                 </Grid>
+                <Grid item xs={3} />
+                <Grid item xs={3} />
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardHeader
+                                className={classes.header}
+                                title="Early Playtesters"
+                                titleTypographyProps={{ variant: "h5" }}
+                            />
+                            <CardContent>
+                                <ul>
+                                    <li>Sean Leventhal</li>
+                                    <li>Jamie O'Marr</li>
+                                    <li>Ash Kreider</li>
+                                    <li>Zoe Bloom</li>
+                                    <li>jay Dragon</li>
+                                    <li>George Austin</li>
+                                    <li>Jason Morningstar</li>
+                                </ul>
+                                ... and many more who have yet to get us their preferred names.
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
             </Grid>
         </div>
     )
