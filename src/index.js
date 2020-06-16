@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import './index.css'
 import Home from './Home'
@@ -46,16 +47,22 @@ const a11yProps = (index) => {
 }
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    verticalRoot: {
       backgroundColor: theme.palette.background.paper,
       display: "flex",
       flexDirection: "row",
       alignItems: "top",
       paddingTop: 40
     },
-    tabs: {
+    horizontalRoot: {
+        paddingTop: 40
+    },
+    verticalTabs: {
         borderRight: `1px solid ${theme.palette.divider}`,
         flexShrink: 0
+    },
+    horizontalTabs: {
+        borderBottom: `1px solid ${theme.palette.divider}`
     },
     tabPanel: {
         maxWidth: "1200",
@@ -79,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
 const MTWTabs = () => {
     const classes = useStyles()
     const theme = useTheme()
+    const matches = useMediaQuery(theme.breakpoints.up('md'))
     const [value, setValue] = React.useState(0)
   
     const handleChange = (event, newValue) => {
@@ -88,16 +96,17 @@ const MTWTabs = () => {
     return (
         <React.Fragment>
             <AppBar className={classes.appBar}><Typography variant="h4">Make The World</Typography></AppBar>
-            <div className={classes.root}>
+            <div className={ matches ? classes.verticalRoot : classes.horizontalRoot }>
                 <Tabs
-                    orientation="vertical"
+                    orientation={matches ? "vertical" : "horizontal"}
                     variant="scrollable"
+                    scrollButtons="auto"
                     value={value}
                     onChange={handleChange}
                     indicatorColor="primary"
                     textColor="primary"
                     aria-label="navigation tabs"
-                    className={classes.tabs}
+                    className={matches ? classes.verticalTabs : classes.horizontalTabs }
                 >
                     <Tab label="Home" {...a11yProps(0)} />
                     <Tab label="Tour" {...a11yProps(1)} />

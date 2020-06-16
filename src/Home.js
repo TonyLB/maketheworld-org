@@ -6,7 +6,8 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -47,15 +48,20 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 function Home() {
+    const theme = useTheme()
+    const matches = useMediaQuery(theme.breakpoints.up('lg'))
     const classes = useStyles()
     return (
         <div style={{ maxWidth: "1200px" }}>
             <Card className={classes.card}>
-                <CardMedia
-                    style={{ height: "320px" }}
-                    image="/images/Solarium.png"
-                    title="Solarium"
-                />
+                { (matches &&
+                    <CardMedia
+                        style={{ width: "100%", height: "320px" }}
+                        image="/images/Solarium.png"
+                        title="Solarium"
+                    />) ||
+                    <CardHeader title={<img src="/images/Solarium.png" alt="Example" style={{ width: "100%", objectFit: "contain", margin: "0px" }} />} />
+                }
                 <CardContent>
                     <p>Welcome to Make The World.  MTW is a text-based social and exploration game-builder similar to MUSHes, using modern gaming and computer tech with a
                     retro feel. Play in Worlds hosted by others, or install your own instance of MTW and invite your friends to help create a world from scratch!</p>
