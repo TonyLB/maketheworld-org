@@ -292,6 +292,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <img className={classes.image} alt="Tour10" src="/images/Tour/Tour10.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -312,7 +313,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
-                                <img className={classes.image} alt="Tour10" src="/images/Tour/Tour10.png" />
+                                <img className={classes.image} alt="Tour11" src="/images/Tour/Tour11.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -340,6 +341,7 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <img className={classes.image} alt="Tour12" src="/images/Tour/Tour12.png" />
                             </CardContent>
                         </Card>
                     </Paper>
@@ -348,6 +350,9 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <p>
+                                Now that you have a neighborhood of your own, you may edit it by pressing the Pencil icon alongside its name.
+                                </p>
                                 <p>
                                 There are lots of fiddly little bits to a Neighborhood, but the main two to focus on immediately are <em>Visibility</em>&nbsp;
                                 and <em>Topology</em>.  Visibility is just what it sounds like:  Can other people see the Neighborhood?  And Topology is
@@ -367,6 +372,40 @@ function Tour() {
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
                             <CardContent>
+                                <img className={classes.image} alt="Tour13" src="/images/Tour/Tour13.png" />
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <p>
+                                You’ve made a neighborhood! Great; now let's make a room. Click the create room button next to your neighborhood. When you make a room,
+                                you have complete control over what to call it and how to describe it.
+                                </p>
+                                <p>
+                                While you’re making a room, you’ll see external paths at the button and neighborhood paths on the right. These paths are the ways you
+                                go from room to room. Make an external path to the room you want to use to get into your neighborhood; this is probably a room in the
+                                neighborhood you made yours a part of.
+                                </p>
+                                <p>
+                                When you make multiple rooms in the same neighborhood (like multiple rooms in a spaceship), connect those with neighborhood paths.
+                                </p>
+                                <p>
+                                You can connect any rooms within the same neighborhood, so long as you have permissions in that space. And you can always make as many
+                                rooms and neighborhoods as you want, and keep them hidden until you want to show them.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    </Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper elevation={0} className={classes.paper}>
+                        <Card className={classes.card}>
+                            <CardContent>
+                                <img className={classes.image} alt="Tour14" src="/images/Tour/Tour14.png" />
                             </CardContent>
                         </Card>
                     </Paper>
