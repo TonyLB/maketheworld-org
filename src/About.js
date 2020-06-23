@@ -99,8 +99,9 @@ function About() {
                                     <li>jay Dragon</li>
                                     <li>George Austin</li>
                                     <li>Jason Morningstar</li>
+                                    <li>Shayna Cook</li>
                                 </ul>
-                                ... and many more who have yet to get us their preferred names.
+                                ... and many more who have yet to get us their preferred names.  We are positive we have missed some folks. If so, please let us know what name you want to be credited by.
                             </CardContent>
                         </Card>
                     </Paper>

@@ -63,8 +63,9 @@ function Home() {
                     <CardHeader title={<img src="/images/Solarium.png" alt="Example" style={{ width: "100%", objectFit: "contain", margin: "0px" }} />} />
                 }
                 <CardContent>
-                    <p>Welcome to Make The World.  MTW is a text-based social and exploration game-builder similar to MUSHes, using modern gaming and computer tech with a
-                    retro feel. Play in Worlds hosted by others, or install your own instance of MTW and invite your friends to help create a world from scratch!</p>
+                    <p>Welcome to Make The World.  MTW is a text-based social and exploration game-builder, using modern gaming and computer tech with a
+                    retro feel.  If you've played a TinyMUD or TinyMUSH you should feel right at home. Play in Worlds hosted by others, or install your
+                    own instance of MTW and invite your friends to help create a world from scratch!</p>
                 </CardContent>
             </Card>
 
@@ -113,22 +114,37 @@ function Home() {
             </div>
             <Grid container>
                 <Grid item xs={6}>
-                    <Card className={classes.card}>
+                    <Card
+                        className={classes.hoverCard}
+                        onClick={ () => { window.open('https://amethystmill.maketheworld.org/') }}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <CardMedia
                             className={classes.media}
-                            image="/images/Outback.jpg"
-                            title="Outback"
+                            image="/images/AmethystMill.jpg"
+                            title="Amethyst Mill"
                         >
-                            <CardHeader className={classes.header} title="Apocalypse World: Burned Over" />
+                            <CardHeader className={classes.header} title="Amethyst Mill" />
                         </CardMedia>
                         <CardContent>
-                            Apocalypse World: Burned Over is a MTW instance designed and hosted by Meg Baker! Freeform roleplay in an apocalyptic landscape.
-                            To join the AWBO instance, click here to make your character for this PBP multi-player game.
+                            <p>
+                            Since 1830, the house has been there. Growing organically along the edge of the ridge above the stream that gives it the name: Amethyst Mill.
+                            Grand and humble, serene and vibrant, home to a thousand stories, while porches become rooms and rooms become wings and out buildings
+                            come and go. What will your story be? When will you visit Amethyst Mill?
+                            </p>
+                            <p>
+                            Amethyst Mill is a MTW instance designed and hosted by Meguey Baker! Freeform roleplay in and around a large multi-generational home featured
+                            in her Local History Rescue work. To join the Amethyst Mill instance, click here to make your character for this PBP multi-player game.
+                            </p>
                         </CardContent>
                     </Card>
                 </Grid>
                 <Grid item xs={6}>
-                    <Card className={classes.card}>
+                    <Card
+                        className={classes.hoverCard}
+                        onClick={ () => { window.open('https://spacestationzero.maketheworld.org/') }}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <CardMedia
                             className={classes.media}
                             image="/images/SpaceStationZero.jpg"
