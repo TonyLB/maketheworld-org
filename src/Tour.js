@@ -93,10 +93,9 @@ function Tour() {
                         <Card className={classes.card}>
                             <CardHeader title="Frequently Asked Question" />
                             <CardContent>
-                                <strong>How are passwords, email addresses, etc stored?  Specifically, how safe and private is my information?</strong><br /><br />
+                                <strong>How are passwords stored?  Specifically, how safe and private is my information?</strong><br /><br />
                                 <em>Answer: As per industry standards, this information is stored by AWS, not by our system.  MTW only knows that you have authenticated that you are
-                                    the person associated with a given player name. We DO NOT have access to your email address, password, etc. We cannot even access how the
-                                    underlying technology works.
+                                    the person associated with a given player name. We DO NOT have access to your password. We cannot even access how that underlying technology works.
 
                                     It is worth restating: It’s not just that we won’t or do not know how to get your password -- it is that it is protected from us in much the same
                                     way your Netflix password is protected from Netflix employees.  They aren't given the tools to access your information, and neither are we.</em>

@@ -39,7 +39,7 @@ function News() {
                 <Grid item xs={6}>
                     <Paper elevation={0} className={classes.paper}>
                         <Card className={classes.card}>
-                            <CardHeader title="Mid-June" />
+                            <CardHeader title="Late June..." />
                             <CardContent>
                                 We released version 1.0 (the <em>minimum viable product</em>) to the public.  It supports rooms, neighborhoods, maps, navigation, chat,
                                 direct messaging, permissions, etc.  V1.0 is a bit threadbare, but that's the nature of getting things in front of people as soon as
