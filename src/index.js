@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import AppBar from '@material-ui/core/AppBar'
-import Typography from '@material-ui/core/Typography'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import AppBar from '@mui/material/AppBar'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { useTheme } from '@mui/material/styles'
 import './index.css'
 import Home from './Home'
 import Tour from './Tour'
@@ -17,7 +17,6 @@ import Contact from './Contact'
 import * as serviceWorker from './serviceWorker'
 
 const TabPanel = (props) => {
-    const classes = useStyles()
     const { children, value, index, ...other } = props;
 
     return (
@@ -29,7 +28,7 @@ const TabPanel = (props) => {
             {...other}
         >
             {value === index && (
-                <div className={classes.tabContent}>
+                <div>
                     <div>
                         {children}
                     </div>
@@ -45,49 +44,16 @@ const a11yProps = (index) => {
         'aria-controls': `full-width-tabpanel-${index}`,
     }
 }
-
-const useStyles = makeStyles((theme) => ({
-    verticalRoot: {
-      backgroundColor: theme.palette.background.paper,
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "top",
-      paddingTop: 40
-    },
-    horizontalRoot: {
-        paddingTop: 40
-    },
-    verticalTabs: {
-        borderRight: `1px solid ${theme.palette.divider}`,
-        flexShrink: 0
-    },
-    horizontalTabs: {
-        borderBottom: `1px solid ${theme.palette.divider}`
-    },
-    tabPanel: {
-        maxWidth: "1200",
-        width: "100%",
-        padding: 20
-    },
-    tabContent: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%"
-    },
-    appBar: {
-        height: 40,
-        alignItems: "center",
-        paddingLeft: "200px"
-    }
-  }));
   
 const MTWTabs = () => {
-    const classes = useStyles()
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.up('md'))
     const [value, setValue] = React.useState(0)
+    const tabPanelSx = {
+        maxWidth: "1200",
+        width: "100%",
+        padding: 20
+    }
   
     const handleChange = (event, newValue) => {
       setValue(newValue)
@@ -95,8 +61,29 @@ const MTWTabs = () => {
     
     return (
         <React.Fragment>
-            <AppBar className={classes.appBar}><Typography variant="h4">Make The World</Typography></AppBar>
-            <div className={ matches ? classes.verticalRoot : classes.horizontalRoot }>
+            <AppBar
+                sx={{
+                    height: 40,
+                    alignItems: "center",
+                    paddingLeft: "200px"
+                }}
+            >
+                <Typography variant="h4">Make The World</Typography>
+            </AppBar>
+            <div
+                sx={ matches
+                    ? {
+                        backgroundColor: theme.palette.background.paper,
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "top",
+                        paddingTop: 40
+                    }
+                    : {
+                        paddingTop: 40
+                    }
+                }
+            >
                 <Tabs
                     orientation={matches ? "vertical" : "horizontal"}
                     variant="scrollable"
@@ -106,7 +93,15 @@ const MTWTabs = () => {
                     indicatorColor="primary"
                     textColor="primary"
                     aria-label="navigation tabs"
-                    className={matches ? classes.verticalTabs : classes.horizontalTabs }
+                    sx={ matches
+                        ? {
+                            borderRight: `1px solid ${theme.palette.divider}`,
+                            flexShrink: 0
+                        }
+                        : {
+                            borderBottom: `1px solid ${theme.palette.divider}`
+                        }
+                    }
                 >
                     <Tab label="Home" {...a11yProps(0)} />
                     <Tab label="Tour" {...a11yProps(1)} />
@@ -115,22 +110,22 @@ const MTWTabs = () => {
                     <Tab label="News" {...a11yProps(4)} />
                     <Tab label="Contact" {...a11yProps(5)} />
                 </Tabs>
-                <TabPanel className={classes.tabPanel} value={value} index={0} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={0} dir={theme.direction}>
                     <Home />
                 </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={1} dir={theme.direction}>
                     <Tour />
                 </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={2} dir={theme.direction}>
                     <Features />
                 </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={3} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={3} dir={theme.direction}>
                     <About />
                 </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={4} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={4} dir={theme.direction}>
                     <News />
                 </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={5} dir={theme.direction}>
+                <TabPanel sx={tabPanelSx} value={value} index={5} dir={theme.direction}>
                     <Contact />
                 </TabPanel>
             </div>

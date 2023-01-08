@@ -1,51 +1,38 @@
 import React from 'react'
 
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardHeader from '@material-ui/core/CardHeader'
-import CardMedia from '@material-ui/core/CardMedia'
-import Grid from '@material-ui/core/Grid'
-import { makeStyles } from '@material-ui/core/styles'
-
-const useStyles = makeStyles(() => ({
-    card: {
-        border: '2px solid',
-        borderColor: '#E7EDF3',
-        borderRadius: 16,
-        margin: "10px",
-        height: "100%"
-    },
-    media: {
-        height: "100px"
-    },
-    header: {
-        color: "#FFFFFF",
-        textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
-    }
-}))
+import CardContent from '@mui/material/CardContent'
+import CardHeader from '@mui/material/CardHeader'
+import CardMedia from '@mui/material/CardMedia'
+import Grid from '@mui/material/Grid'
+import AppCard from './AppCard'
 
 function Features() {
-    const classes = useStyles()
     return (
         <div style={{ maxWidth: "1200px" }}>
-            <Card className={classes.card}>
+            <AppCard>
                 <CardContent>
                     What sets Make The World apart from similar systems that have been running on the internet since before there even was an internet?  We've brought
                     several technical advances to the table, to give both game-administrators and players a better experience:
                 </CardContent>
-            </Card>
+            </AppCard>
 
             <Grid container spacing={4}>
                 <Grid item xs={6}>
                     <Grid container spacing={4}>
                         <Grid item xs={12}>
-                            <Card className={classes.card}>
+                            <AppCard>
                                 <CardMedia
-                                    className={classes.media}
+                                    sx={{ height: "100px" }}
                                     image="/images/Spiderweb.jpg"
                                     title="Web"
                                 >
-                                    <CardHeader className={classes.header} title="Web-Native" />
+                                    <CardHeader 
+                                        sx={{
+                                                color: "#FFFFFF",
+                                                textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"                                        
+                                        }}
+                                        title="Web-Native"
+                                    />
                                 </CardMedia>
                                 <CardContent>
                                     The game lives (as far as you're concerned) in your web-browser.  That's where you make an imaginary world, and tell stories with the friends
@@ -53,17 +40,23 @@ function Features() {
                                     So far we've built out visual maps, an always-on list of who is present in the game, and a web-friendly set of forms and dialogs for anything
                                     you need to edit or change.
                                 </CardContent>
-                            </Card>
+                            </AppCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.media}
-                                image="/images/Grass.jpg"
-                                title="Web"
-                            >
-                                <CardHeader className={classes.header} title="Grassroots-Focussed" />
-                            </CardMedia>
+                            <AppCard>
+                                <CardMedia
+                                    sx={{ height: "100px" }}
+                                    image="/images/Grass.jpg"
+                                    title="Web"
+                                >
+                                    <CardHeader
+                                        sx={{
+                                            color: "#FFFFFF",
+                                            textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
+                                        }}
+                                        title="Grassroots-Focussed"
+                                    />
+                                </CardMedia>
                                 <CardContent>
                                     Make The World is built from the foundations to support turning <em>players</em> into <em>collaborators</em>.  It makes it simple for players to
                                     create private rooms, neighborhoods, and worlds of their own, from the moment they log on ... while keeping these creations seamlessly hidden
@@ -71,18 +64,24 @@ function Features() {
                                     Pushing creative and administrative tasks down as far as possible toward the grass-roots level means that a vibrant game can operate without
                                     requiring a dedicated (and frequently exhausted) staff of moderators and administrators to gate-keep every little detail.
                                 </CardContent>
-                            </Card>
+                            </AppCard>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
-                    <Card className={classes.card}>
+                    <AppCard>
                         <CardMedia
-                            className={classes.media}
+                            sx={{ height: "100px" }}
                             image="/images/Cloud.jpg"
                             title="Web"
                         >
-                            <CardHeader className={classes.header} title="Cloud-Powered" />
+                            <CardHeader
+                                sx={{
+                                    color: "#FFFFFF",
+                                    textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"                            
+                                }}
+                                title="Cloud-Powered"
+                            />
                         </CardMedia>
                         <CardContent>
                             The power behind a Make The World instance lives in the Amazon Web Services (AWS) cloud, as a constellation of storage resources and serverless compute
@@ -105,7 +104,7 @@ function Features() {
                                 </li>
                             </ul>
                         </CardContent>
-                    </Card>
+                    </AppCard>
                 </Grid>
             </Grid>
             <br />
