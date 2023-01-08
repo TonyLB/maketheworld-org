@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
@@ -139,10 +140,9 @@ const MTWTabs = () => {
     )
 }
 
-ReactDOM.render(
-    <MTWTabs />,
-    document.getElementById('root')
-);
+const container = document.getElementById('root')
+const root = createRoot(container)
+root.render(<MTWTabs />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
