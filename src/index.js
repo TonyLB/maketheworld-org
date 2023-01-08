@@ -15,6 +15,7 @@ import About from './About'
 import News from './News'
 import Contact from './Contact'
 import * as serviceWorker from './serviceWorker'
+import { Box } from '@mui/material'
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -52,7 +53,7 @@ const MTWTabs = () => {
     const tabPanelSx = {
         maxWidth: "1200",
         width: "100%",
-        padding: 20
+        padding: "20px"
     }
   
     const handleChange = (event, newValue) => {
@@ -63,24 +64,24 @@ const MTWTabs = () => {
         <React.Fragment>
             <AppBar
                 sx={{
-                    height: 40,
+                    height: "40px",
                     alignItems: "center",
-                    paddingLeft: "200px"
+                    paddingLeft: matches ? "200px" : "0px"
                 }}
             >
                 <Typography variant="h4">Make The World</Typography>
             </AppBar>
-            <div
+            <Box
                 sx={ matches
                     ? {
                         backgroundColor: theme.palette.background.paper,
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "top",
-                        paddingTop: 40
+                        paddingTop: "40px"
                     }
                     : {
-                        paddingTop: 40
+                        paddingTop: "40px"
                     }
                 }
             >
@@ -128,7 +129,7 @@ const MTWTabs = () => {
                 <TabPanel sx={tabPanelSx} value={value} index={5} dir={theme.direction}>
                     <Contact />
                 </TabPanel>
-            </div>
+            </Box>
         </React.Fragment>
     )
 }
