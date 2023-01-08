@@ -59,10 +59,10 @@ function Features() {
                                 </CardMedia>
                                 <CardContent>
                                     Make The World is built from the foundations to support turning <em>players</em> into <em>collaborators</em>.  It makes it simple for players to
-                                    create private rooms, neighborhoods, and worlds of their own, from the moment they log on ... while keeping these creations seamlessly hidden
-                                    from other players, until they find someone with a public space who will, in turn, agree that they can make their creation public within it.
-                                    Pushing creative and administrative tasks down as far as possible toward the grass-roots level means that a vibrant game can operate without
-                                    requiring a dedicated (and frequently exhausted) staff of moderators and administrators to gate-keep every little detail.
+                                    create private rooms, neighborhoods, and worlds of their own, from the moment they log on ... while keeping these creations seamlessly private
+                                    from other players, until they decide that their draft is ready for review. Making creative tools available in a safe sandbox as easily as possible
+                                    means that a vibrant game can operate without requiring a dedicated (and frequently exhausted) staff of moderators and administrators to manually
+                                    approve (or even have to implement) every little detail.
                                 </CardContent>
                             </AppCard>
                         </Grid>
