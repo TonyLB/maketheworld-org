@@ -100,13 +100,11 @@ function Home() {
                         </CardMedia>
                         <CardContent>
                             <p>
-                            Since 1830, the house has been there. Growing organically along the edge of the ridge above the stream that gives it the name: Amethyst Mill.
-                            Grand and humble, serene and vibrant, home to a thousand stories, while porches become rooms and rooms become wings and out buildings
-                            come and go. What will your story be? When will you visit Amethyst Mill?
+                            Some say the world will end in fire, some say in ice ... but how about underground?  Or flooded?  Overgrown?  Burnt and decayed?
                             </p>
                             <p>
-                            Amethyst Mill is a MTW instance designed and hosted by Meguey Baker! Freeform roleplay in and around a large multi-generational home featured
-                            in her Local History Rescue work. To join the Amethyst Mill instance, click here to make your character for this PBP multi-player game.
+                            Apocalype World - Burned Over provides you with a variety of post-apocalyptic settings.  Choose a blasted and ruined world,
+                            and tell the story of your character as they find themselves, those they can trust, and maybe even a little hope.
                             </p>
                         </CardContent>
                     </AppCard>
@@ -132,6 +130,32 @@ function Home() {
                             or keep them to yourself! To join the SSZ instance, click here to make your character for this freeform PBP multi-player game.
                         </CardContent>
                     </AppCard>
+                </Grid>
+                <Grid item xs={6}>
+                    <Card
+                        className={classes.hoverCard}
+                        onClick={ () => { window.open('https://amethystmill.maketheworld.org/') }}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        <CardMedia
+                            className={classes.media}
+                            image="/images/AmethystMill.jpg"
+                            title="Amethyst Mill"
+                        >
+                            <CardHeader className={classes.header} title="Amethyst Mill" />
+                        </CardMedia>
+                        <CardContent>
+                            <p>
+                            Since 1830, the house has been there. Growing organically along the edge of the ridge above the stream that gives it the name: Amethyst Mill.
+                            Grand and humble, serene and vibrant, home to a thousand stories, while porches become rooms and rooms become wings and out buildings
+                            come and go. What will your story be? When will you visit Amethyst Mill?
+                            </p>
+                            <p>
+                            Amethyst Mill is a MTW instance designed and hosted by Meguey Baker! Freeform roleplay in and around a large multi-generational home featured
+                            in her Local History Rescue work. To join the Amethyst Mill instance, click here to make your character for this PBP multi-player game.
+                            </p>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
 
