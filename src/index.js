@@ -52,8 +52,9 @@ const MTWTabs = () => {
     const [value, setValue] = React.useState(0)
     const tabPanelSx = {
         maxWidth: "1200",
-        width: "100%",
-        padding: "20px"
+        padding: "20px",
+        height: "100%",
+        overflowY: "auto"
     }
   
     const handleChange = (event, newValue) => {
@@ -78,10 +79,12 @@ const MTWTabs = () => {
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "top",
-                        paddingTop: "40px"
+                        paddingTop: "40px",
+                        height: "calc(100vh - 40px)"
                     }
                     : {
-                        paddingTop: "40px"
+                        paddingTop: "40px",
+                        height: "calc(100vh - 40px)"
                     }
                 }
             >
@@ -111,24 +114,26 @@ const MTWTabs = () => {
                     <Tab label="News" {...a11yProps(4)} />
                     <Tab label="Contact" {...a11yProps(5)} />
                 </Tabs>
-                <TabPanel sx={tabPanelSx} value={value} index={0} dir={theme.direction}>
-                    <Home />
-                </TabPanel>
-                <TabPanel sx={tabPanelSx} value={value} index={1} dir={theme.direction}>
-                    <Tour />
-                </TabPanel>
-                <TabPanel sx={tabPanelSx} value={value} index={2} dir={theme.direction}>
-                    <Features />
-                </TabPanel>
-                <TabPanel sx={tabPanelSx} value={value} index={3} dir={theme.direction}>
-                    <About />
-                </TabPanel>
-                <TabPanel sx={tabPanelSx} value={value} index={4} dir={theme.direction}>
-                    <News />
-                </TabPanel>
-                <TabPanel sx={tabPanelSx} value={value} index={5} dir={theme.direction}>
-                    <Contact />
-                </TabPanel>
+                <Box sx={{ height: "100%", overflowY: "auto" }}>
+                    <TabPanel sx={tabPanelSx} value={value} index={0} dir={theme.direction}>
+                        <Home />
+                    </TabPanel>
+                    <TabPanel sx={tabPanelSx} value={value} index={1} dir={theme.direction}>
+                        <Tour />
+                    </TabPanel>
+                    <TabPanel sx={tabPanelSx} value={value} index={2} dir={theme.direction}>
+                        <Features />
+                    </TabPanel>
+                    <TabPanel sx={tabPanelSx} value={value} index={3} dir={theme.direction}>
+                        <About />
+                    </TabPanel>
+                    <TabPanel sx={tabPanelSx} value={value} index={4} dir={theme.direction}>
+                        <News />
+                    </TabPanel>
+                    <TabPanel sx={tabPanelSx} value={value} index={5} dir={theme.direction}>
+                        <Contact />
+                    </TabPanel>
+                </Box>
             </Box>
         </React.Fragment>
     )
