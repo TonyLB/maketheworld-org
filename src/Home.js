@@ -14,7 +14,7 @@ function Home() {
     const matches = useMediaQuery(theme.breakpoints.up('lg'))
     return (
         <div style={{ maxWidth: "1200px" }}>
-            <AppCard>
+            <AppCard sx={{ borderRadius: "0px 0px 16px 16px" }}>
                 { (matches &&
                     <CardMedia
                         style={{ width: "100%", height: "320px" }}

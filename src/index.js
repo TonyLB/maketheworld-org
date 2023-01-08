@@ -114,7 +114,7 @@ const MTWTabs = () => {
                     <Tab label="News" {...a11yProps(4)} />
                     <Tab label="Contact" {...a11yProps(5)} />
                 </Tabs>
-                <Box sx={{ height: "100%", overflowY: "auto" }}>
+                <Box sx={{ height: "100%", overflowY: "auto", flexGrow: 1 }}>
                     <TabPanel sx={tabPanelSx} value={value} index={0} dir={theme.direction}>
                         <Home />
                     </TabPanel>
