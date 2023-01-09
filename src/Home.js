@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent'
 import CardHeader from '@mui/material/CardHeader'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 import AppCard from './AppCard'
@@ -73,61 +72,6 @@ function Home() {
                             Design rooms, share them with your friends, use them for ongoing freeform play or to closely map a space to support your GMd game.
                             Use MTW to provide a more concrete sense of space for gaming over other tech like Discord or Zoom or Hangouts, or to start a
                             freeform community.
-                        </CardContent>
-                    </AppCard>
-                </Grid>
-            </Grid>
-            <br /><br />
-
-            <div style={{ width: "100%" }}>
-                <Typography variant="h4" gutterBottom align="center">Featured Worlds</Typography>
-            </div>
-            <Grid container>
-                <Grid item xs={6}>
-                    <AppCard>
-                        <CardMedia
-                            sx={{ height: "100px" }}
-                            image="/images/AmethystMill.jpg"
-                            title="Amethyst Mill"
-                        >
-                            <CardHeader
-                                sx={{
-                                    color: "#FFFFFF",
-                                    textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"                            
-                                }}
-                                title="Amethyst Mill"
-                            />
-                        </CardMedia>
-                        <CardContent>
-                            <p>
-                            Some say the world will end in fire, some say in ice ... but how about underground?  Or flooded?  Overgrown?  Burnt and decayed?
-                            </p>
-                            <p>
-                            Apocalype World - Burned Over provides you with a variety of post-apocalyptic settings.  Choose a blasted and ruined world,
-                            and tell the story of your character as they find themselves, those they can trust, and maybe even a little hope.
-                            </p>
-                        </CardContent>
-                    </AppCard>
-                </Grid>
-                <Grid item xs={6}>
-                    <AppCard>
-                        <CardMedia
-                            sx={{ height: "100px" }}
-                            image="/images/SpaceStationZero.jpg"
-                            title="Space"
-                        >
-                            <CardHeader
-                                sx={{
-                                    color: "#FFFFFF",
-                                    textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"                            
-                                }}
-                                title="Space Station Zero"
-                            />
-                        </CardMedia>
-                        <CardContent>
-                            Space Station Zero is a MTW instance with initial design and hosted by William Nichols! Explore a far-flung space habitat, live
-                            in its walls. Or, leave the station to explore strange new worlds! Make up new worlds and new spaceships for others to explore,
-                            or keep them to yourself! To join the SSZ instance, click here to make your character for this freeform PBP multi-player game.
                         </CardContent>
                     </AppCard>
                 </Grid>

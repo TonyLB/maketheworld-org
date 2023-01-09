@@ -25,11 +25,10 @@ function News() {
                             right key to make a suggested change, players should be able to click a pencil icon on
                             the room they're currently playing in, and start a Suggestion file by directly editing
                             the scene they're looking at right that instant.  These suggestions will be kept private
-                            in draft phase, and then revealed to opt-in reviewers when the player is ready for their
-                            changes to be considered for publication either as a story to share with those who wish
-                            (e.g. "Let's edit this room to what it looks like after the dragon has attacked, when
-                            people are stumbling through the ruined city as part of the next chapter of the Glassfall
-                            Arc") or as a permanent change to the world everyone sees.
+                            while in draft phase.  When the creator feels the change is ready, it can be opened to
+                            volunteer reviewers for approval. Unreviewed (or unapproved) drafts can still be shared
+                            directly with friends, but a review for community standards is required before the general
+                            public sees the changes, either as part of a temporary story or a permanent change in the world.
                         </p>
                     </CardContent>
                 </AppCard>
