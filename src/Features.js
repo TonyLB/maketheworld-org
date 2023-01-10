@@ -35,10 +35,9 @@ function Features() {
                                     />
                                 </CardMedia>
                                 <CardContent>
-                                    The game lives (as far as you're concerned) in your web-browser.  That's where you make an imaginary world, and tell stories with the friends
-                                    you will make in it.  Having the power of a web-browser to draw on means that we can present a richer experience than previous such games.
-                                    So far we've built out visual maps, an always-on list of who is present in the game, and a web-friendly set of forms and dialogs for anything
-                                    you need to edit or change.
+                                    Everything you need to play the game is in your web-browser.  That's where you create an imaginary world, and tell stories with the friends
+                                    you will make in it.  Making the game web-native means that it has the easiest outreach (no application required) while still giving MTW
+                                    the power to present a rich experience that you can dive into however you want.
                                 </CardContent>
                             </AppCard>
                         </Grid>
