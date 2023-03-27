@@ -160,7 +160,7 @@ function Tour() {
                 <Grid item xs={6}>
                     <AppCard>
                         <CardContent>
-                            <img style={{ maxWidth: "100%" }} alt="Tour1" src="/images/Tour/Tour1.png" />
+                            <img style={{ maxWidth: "100%" }} alt="Tour5" src="/images/Tour/Tour5.png" />
                         </CardContent>
                     </AppCard>
                 </Grid>
@@ -194,7 +194,7 @@ function Tour() {
                 <Grid item xs={6}>
                     <AppCard>
                         <CardContent>
-                            <img style={{ maxWidth: "100%" }} alt="Tour1" src="/images/Tour/Tour1.png" />
+                            <img style={{ maxWidth: "100%" }} alt="Tour6" src="/images/Tour/Tour6.png" />
                         </CardContent>
                     </AppCard>
                 </Grid>
