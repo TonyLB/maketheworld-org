@@ -123,7 +123,7 @@ function Tour() {
                 <Grid item xs={6}>
                     <AppCard>
                         <CardContent>
-                            <img style={{ maxWidth: "100%" }} alt="Tour1" src="/images/Tour/Tour1.png" />
+                            <img style={{ maxWidth: "100%" }} alt="Tour4" src="/images/Tour/Tour4.png" />
                         </CardContent>
                     </AppCard>
                 </Grid>
