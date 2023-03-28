@@ -10,17 +10,21 @@ function News() {
         <div style={{ maxWidth: "1200px" }}>
             <Stack>
                 <AppCard>
-                    <CardHeader title="January 2023..." />
+                    <CardHeader title="March 2023..." />
                     <CardContent>
                         <p>
-                            This month is focused on pushing all of the back-end changes of the past months to the
-                            user-facing toolkit provided by the Make The World web client:  Variables, state,
-                            actions, conditionals, and the tools for rendering the most complicated of rooms,
-                            details, and behaviors need to be presented in a way that's fun rather than overwhelming.
+                            March has been a month of cleanup and quality-of-life improvements throughout MTW, in
+                            anticipation of exposing the system the alpha testers. The Suggestion mechanic has been
+                            streamlined and optimized, and the what-you-see-is-what-you-get room and feature editors
+                            have been made a leap more capable and powerful.
                         </p>
-
+                    </CardContent>
+                </AppCard>
+                <AppCard>
+                    <CardHeader title="February 2023..." />
+                    <CardContent>
                         <p>
-                            Additionally, January sees the debut of the in-place Suggestion mechanic:  Rather than
+                            February sees the debut of the in-place Suggestion mechanic:  Rather than
                             starting in the (overwhelming) Library, and searching through the index of an Asset to find the
                             right key to make a suggested change, players should be able to click a pencil icon on
                             the room they're currently playing in, and start a Suggestion file by directly editing
@@ -29,6 +33,17 @@ function News() {
                             volunteer reviewers for approval. Unreviewed (or unapproved) drafts can still be shared
                             directly with friends, but a review for community standards is required before the general
                             public sees the changes, either as part of a temporary story or a permanent change in the world.
+                        </p>
+                    </CardContent>
+                </AppCard>
+                <AppCard>
+                    <CardHeader title="January 2023..." />
+                    <CardContent>
+                        <p>
+                            This month is focused on pushing all of the back-end changes of the past months to the
+                            user-facing toolkit provided by the Make The World web client:  Variables, state,
+                            actions, conditionals, and the tools for rendering the most complicated of rooms,
+                            details, and behaviors need to be presented in a way that's fun rather than overwhelming.
                         </p>
                     </CardContent>
                 </AppCard>
